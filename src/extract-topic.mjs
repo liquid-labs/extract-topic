@@ -24,19 +24,19 @@ import { removeTags } from './lib/remove-tags'
  * leading '*' characters from the body of the comment are removed (Javadoc style).
  * @param {string} text - The original block of text to extract the topic from.
  * @param {object} [options] - Extraction options.
- * @param {Array.<string>} [options.commentSignifiers] - An array of comment signifiers to be removed.
+ * @param {Array.<string>} [options.commentSignifiers = ['/*', '//']] - An array of comment signifiers to be removed.
  *   Pass in an empty array to keep all comment signifiers. See note on removing comment signifiers in function
  *   documentation.
- * @param {boolean} [options.keepCommentChars] - If true, then comment signifiers are left in place.
- * @param {boolean} [options.keepHeaders] - If true, then HTML and Markdown style headers are left in place.
- * @param {boolean} [options.keepMd] - If true, then Markdown formatting is left in place.
- * @param {boolean} [options.keepTags] - If true, then HTML style tags are left in place.
+ * @param {boolean} [options.keepCommentChars = false] - If true, then comment signifiers are left in place.
+ * @param {boolean} [options.keepHeaders = false] - If true, then HTML and Markdown style headers are left in place.
+ * @param {boolean} [options.keepMd = false] - If true, then Markdown formatting is left in place.
+ * @param {boolean} [options.keepTags = false] - If true, then HTML style tags are left in place.
  * @param {number|undefined} [options.maxChars] - If set, then result will be limited to the indicated
  *   number of characters.
- * @param {number} [options.minChars] - If set, then the function will continue to extract sentences until the
+ * @param {number} [options.minChars = 0] - If set, then the function will continue to extract sentences until the
  *   `minChars` have been satisfied (regardless of `sentenceCount`).
- * @param {boolean} [options.removeBackticks] - If True, then backticks are also removed.
- * @param {number} [options.sentenceCount] - The minimum number of sentences to extract.
+ * @param {boolean} [options.removeBackticks = false] - If True, then backticks are also removed.
+ * @param {number} [options.sentenceCount = 1] - The minimum number of sentences to extract.
  * @returns {string} - The extracted topic.
  */
 const extractTopic = (text, {
