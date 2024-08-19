@@ -1,0 +1,17 @@
+{
+  "name": "extract-topic",
+  "version": "1.0.0-alpha.0",
+  "description": "",
+  "main": "dist/extract-topic.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "Zane Rockenbaugh <zane@liquid-labs.com>",
+  "license": "UNLICENSED",
+  "repository": "git+ssh://git@github.com/liquid-labs/extract-topic.git",
+  "bugs": {
+    "url": "https://github.com/liquid-labs/extract-topic/issues"
+  },
+  "homepage": "https://github.com/liquid-labs/extract-topic#readme"
+}
