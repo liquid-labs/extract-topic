@@ -1,17 +1,34 @@
 {
   "name": "extract-topic",
   "version": "1.0.0-alpha.0",
-  "description": "",
+  "description": "Extracts the topic sentence(s) from a given block of text/HTML/Markdown.",
   "main": "dist/extract-topic.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "make build",
+    "lint": "make lint",
+    "lint:fix": "make lint-fix",
+    "test": "make test",
+    "prepack": "make build",
+    "preversion": "make qa",
+    "qa": "make qa"
   },
-  "keywords": [],
+  "keywords": ["topic sentence", "topic", "summary", "paragraph", "text", "extract"],
   "author": "Zane Rockenbaugh <zane@liquid-labs.com>",
   "license": "UNLICENSED",
   "repository": "git+ssh://git@github.com/liquid-labs/extract-topic.git",
   "bugs": {
     "url": "https://github.com/liquid-labs/extract-topic/issues"
   },
-  "homepage": "https://github.com/liquid-labs/extract-topic#readme"
+  "homepage": "https://github.com/liquid-labs/extract-topic#readme",
+  "devDependencies": {
+    "@liquid-labs/dmd": "^6.3.1",
+    "@liquid-labs/jsdoc-to-markdown": "^8.1.1",
+    "@liquid-labs/sdlc-resource-babel-and-rollup": "^1.0.0-alpha.9",
+    "@liquid-labs/sdlc-resource-eslint": "^1.0.0-alpha.11",
+    "@liquid-labs/sdlc-resource-jest": "^1.0.0-alpha.7",
+    "dmd-readme-api": "^1.0.0-beta.3"
+  },
+  "_comply": {
+    "orgKey": "@liquid-labs"
+  }
 }
