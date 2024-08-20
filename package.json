@@ -1,6 +1,6 @@
 {
   "name": "extract-topic",
-  "version": "1.0.0-beta.5",
+  "version": "1.0.0-beta.6",
   "description": "Extracts the topic sentence(s) from a given block of text/HTML/Markdown.",
   "main": "dist/extract-topic.js",
   "scripts": {
