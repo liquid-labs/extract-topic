@@ -32,8 +32,8 @@ Extracts the topic (typically the first sentence) from a paragraph. The function
 aware and by default will ignore headers and strip formatting.
 
 The algorithm works as follows:
-1. Processes any HTML or Markdown style section headers (e.g., '&lt;h1&gt;...&lt;/h1&gt;', '### ...', etc.), either 
-   removing (default) or converting to a part of the main text body depending on the value of `handleHeaders`. 
+1. Processes any HTML or Markdown style section headers (e.g., '&lt;h1&gt;...&lt;/h1&gt;', '### ...', etc.), either
+   removing (default) or converting to a part of the main text body depending on the value of `handleHeaders`.
    Whitespace is trimmed, unless `keepWhitespace=true` or`keepNewlines=true`.
 2. Removes comment characters (unless `keepCommentChars=true`) and whitespace is trimmed unless
    `keepWhitespace=true` or `keepNewlines=true`.
@@ -57,7 +57,7 @@ leading '*' characters from the body of the comment are removed (Javadoc style).
 | `text` | `string` |  | The original block of text to extract the topic from. |
 | [`options`] | `object` |  | Extraction options. |
 | [`options.commentSignifiers`] | `Array.<string>` | `[&#x27;/*&#x27;, &#x27;//&#x27;]` | An array of comment signifiers to be removed.   Pass in an empty array to keep all comment signifiers. See note on removing comment signifiers in function   documentation. |
-| [`options.handleHeaders`] | `boolean` \| `string` | `false` | If false (or `null`, `undefined`), then headers are    removed from text. If set to a string, then the header text is retained and appended with the value of this    option. E.g., `handleHeader=': '` applied to '&lt;h1&gt;Overview&lt;/h1&gt; Hello!' would yield 'Overview: Hello!' |
+| [`options.handleHeaders`] | `boolean` \| `string` | `false` | If false (or `null`, `undefined`), then headers are   removed from text. If set to a string, then the header text is retained and appended with the value of this   option. E.g., `handleHeader=': '` applied to '&lt;h1&gt;Overview&lt;/h1&gt; Hello!' would yield 'Overview: Hello!' |
 | [`options.keepCommentChars`] | `boolean` | `false` | If true, then comment signifiers are left in place. |
 | [`options.keepMd`] | `boolean` | `false` | If true, then Markdown formatting is left in place. |
 | [`options.keepNewlines`] | `boolean` | `false` | If true, then newlines in the text are preserved. |
