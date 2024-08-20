@@ -3,7 +3,7 @@ const mdHeadersRe = /^(#+)(.*)(\r\n|\r|\n|$)/gm
 
 const processHeaders = (text, { handleHeaders }) => {
   if (handleHeaders === false || handleHeaders === undefined || handleHeaders === null) { // remove headers
-    console.log("ya!", console.log(text.match(htmlHeadersRe))) // DEBUG
+    console.log('ya!', console.log(text.match(htmlHeadersRe))) // DEBUG
     text = text.replaceAll(htmlHeadersRe, '')
     text = text.replaceAll(mdHeadersRe, '')
   }

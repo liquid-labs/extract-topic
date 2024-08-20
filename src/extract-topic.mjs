@@ -9,8 +9,8 @@ import { removeTags } from './lib/remove-tags'
  * aware and by default will ignore headers and strip formatting.
  *
  * The algorithm works as follows:
- * 1. Processes any HTML or Markdown style section headers (e.g., '&lt;h1&gt;...&lt;/h1&gt;', '### ...', etc.), either 
- *    removing (default) or converting to a part of the main text body depending on the value of `handleHeaders`. 
+ * 1. Processes any HTML or Markdown style section headers (e.g., '&lt;h1&gt;...&lt;/h1&gt;', '### ...', etc.), either
+ *    removing (default) or converting to a part of the main text body depending on the value of `handleHeaders`.
  *    Whitespace is trimmed, unless `keepWhitespace=true` or`keepNewlines=true`.
  * 2. Removes comment characters (unless `keepCommentChars=true`) and whitespace is trimmed unless
  *    `keepWhitespace=true` or `keepNewlines=true`.
@@ -32,8 +32,8 @@ import { removeTags } from './lib/remove-tags'
  * @param {Array.<string>} [options.commentSignifiers = ['/*', '//']] - An array of comment signifiers to be removed.
  *   Pass in an empty array to keep all comment signifiers. See note on removing comment signifiers in function
  *   documentation.
- * @param {boolean|string} [options.handleHeaders = false] - If false (or `null`, `undefined`), then headers are 
- *   removed from text. If set to a string, then the header text is retained and appended with the value of this 
+ * @param {boolean|string} [options.handleHeaders = false] - If false (or `null`, `undefined`), then headers are
+ *   removed from text. If set to a string, then the header text is retained and appended with the value of this
  *   option. E.g., `handleHeader=': '` applied to '&lt;h1&gt;Overview&lt;/h1&gt; Hello!' would yield 'Overview: Hello!'
  * @param {boolean} [options.keepCommentChars = false] - If true, then comment signifiers are left in place.
  * @param {boolean} [options.keepMd = false] - If true, then Markdown formatting is left in place.
