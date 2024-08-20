@@ -67,7 +67,7 @@ leading '*' characters from the body of the comment are removed (Javadoc style).
 ## Examples
 
 <table>
-  <th><td>Input</td><td>Options</td><td>Output</td></th>
+  <tr><th>Input</th><th>Options</th><th>Output</th></tr>
   <tr>
     <td><pre>
 This is an IP address: 127.0.0.1. For localhost.
@@ -81,8 +81,8 @@ __And__ **inline** markdown? Is it okay?
   </tr>
   <tr>
     <td><pre>
-<h1>Header</h1>
-<div><bold>And</bold> HTML? Does it work?</div>
+&lt;h1&gt;Header&lt;/h1&gt;
+&lt;div&gt;&lt;bold&gt;And&lt;/bold&gt; HTML? Does it work?&lt;/div&gt;
 </pre></td><td>undefined</td><td><pre>And HTML?</pre><td>
   </tr>
   <tr>
