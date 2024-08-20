@@ -20,3 +20,5 @@ console.log('The topic sentence is: ' + extractTopic(paragraph))
 // prints: "The topic sentence is: Desire is irrelevant."
 ```
 
+See more [examples](#examples).
+

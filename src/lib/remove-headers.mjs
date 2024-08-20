@@ -5,7 +5,7 @@ const removeHeaders = (text) => {
   text = text.replaceAll(htmlHeadersRe, '')
   text = text.replaceAll(mdHeadersRe, '')
 
-  return text.trim()
+  return text
 }
 
 export { removeHeaders }

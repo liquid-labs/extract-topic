@@ -30,6 +30,8 @@ import { removeTags } from './lib/remove-tags'
  * @param {boolean} [options.keepCommentChars = false] - If true, then comment signifiers are left in place.
  * @param {boolean} [options.keepHeaders = false] - If true, then HTML and Markdown style headers are left in place.
  * @param {boolean} [options.keepMd = false] - If true, then Markdown formatting is left in place.
+ * @param {boolean} [options.keepNewlines = false] - If true, then newlines in the text are preserved.
+ * @param {boolean} [options.keepWhitespace = false] - If true, then all whitespace in the text is preserved.
  * @param {boolean} [options.keepTags = false] - If true, then HTML style tags are left in place.
  * @param {number|undefined} [options.maxChars] - If set, then result will be limited to the indicated
  *   number of characters.
@@ -44,6 +46,8 @@ const extractTopic = (text, {
   keepCommentChars = false,
   keepHeaders = false,
   keepMd = false,
+  keepNewlines = false,
+  keepWhitespace = false,
   keepTags = false,
   maxChars,
   minChars = 0,
@@ -52,27 +56,42 @@ const extractTopic = (text, {
 } = {}) => {
   if (keepHeaders !== true) {
     text = removeHeaders(text)
+    text = keepWhitespace === true ? text : text.trim()
   }
   if (keepCommentChars !== true) {
-    text = removeCommentChars(text, { commentSignifiers })
+    text = removeCommentChars(text, { commentSignifiers, keepWhitespace })
+    text = keepWhitespace === true ? text : text.trim()
   }
   if (keepMd !== true) {
-    text = removeMarkdown(text, { removeBackticks })
+    text = removeMarkdown(text, { keepWhitespace, removeBackticks })
+    text = keepWhitespace === true ? text : text.trim()
   }
   if (keepTags !== true) {
     text = removeTags(text)
+    text = keepWhitespace === true ? text : text.trim()
   }
 
-  text = text.split(/(?:\n|\r|\r\n)/).join(' ')
-  text = text.replaceAll(/[\t\xa0]/g, ' ')
-  text = text.replaceAll(/  +/g, ' ')
-  text = text.replaceAll(/ ([?!]|\.(?: |$))/g, '$1') // e.g., change 'huh ?' to 'huh?'
+  if (keepNewlines !== true && keepWhitespace !== true) {
+    text = text.split(/(?:\n|\r|\r\n)/).join(' ')
+  }
+  if (keepWhitespace !== true) {
+    text = text.replaceAll(/[\t\xa0]/g, ' ')
+    text = text.replaceAll(/  +/g, ' ')
+    text = text.replaceAll(/ ([?!]|\.(?: |$))/g, '$1') // e.g., change 'huh ?' to 'huh?'
+  }
 
   let topic = ''
+  let lastTrailingSpace = ''
   for (let i = 0; i < sentenceCount || topic.length < minChars; i += 1) {
-    const [sentence, remainder] = extractSentence(text)
-    topic += (topic.length > 0 ? ' ' : '') + sentence
+    let [sentence, remainder, trailingSpace] = extractSentence(text)
+    sentence = keepWhitespace === true ? sentence : sentence.trim()
+    remainder = keepWhitespace === true ? remainder : remainder.trim()
+
+    const spacer = topic.length === 0 ? '' : (keepWhitespace === true ? lastTrailingSpace : ' ')
+    topic += spacer + sentence
+
     text = remainder
+    lastTrailingSpace = trailingSpace
   }
 
   return maxChars === undefined ? topic : topic.substring(0, maxChars)
