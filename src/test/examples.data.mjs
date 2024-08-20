@@ -9,9 +9,9 @@ const exampleData = [
 
 const exampleString = `<table>\n  <th><td>Input</td><td>Options</td><td>Output</td></th>` +
   exampleData.map(([input, options, output]) =>
-      '\n  <tr>\n    <td>' + input.replaceAll('&', '&amp;').replaceAll('<', '&lt;').replaceAll('>', '&gt;') + '</td>'
+      '\n  <tr>\n    <td><pre>' + input.replaceAll('&', '&amp;').replaceAll('<', '&lt;').replaceAll('>', '&gt;') + '</pre></td>'
       + '<td>' + JSON.stringify(options) + '</td>'
-      + '<td>' + output + '<td>\n  </tr>'
+      + '<td><pre>' + output + '</pre><td>\n  </tr>'
   ).join('') + '\n</table>'
 
 export { exampleData, exampleString }
