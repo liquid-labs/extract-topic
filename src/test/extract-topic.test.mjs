@@ -34,6 +34,8 @@ describe('extractTopic', () => {
     ['`Backticks` go. Yeah?', { removeBackticks : true }, 'Backticks go.'],
     ['\nKeep\xa0\twhitespace. Weird.', { keepWhitespace : true }, '\nKeep\xa0\twhitespace.'],
     ['/** Keep\xa0\twhitespace\n*   in comment. Weird. */', { keepWhitespace : true }, ' Keep\xa0\twhitespace\n  in comment.'],
+    ['And what about\n|markdown|tables|\n|---|---|\n|how|will|\nthat work? Done.', undefined, 'And what about markdown tables how will that work?'],
+    ['And how about MD \(escaped\) text\.', undefined, 'And how about MD (escaped) text.'],
     ...exampleData,
   ])('%s with options %p => %s', (input, options, expected) => expect(extractTopic(input, options)).toBe(expected))
 })
