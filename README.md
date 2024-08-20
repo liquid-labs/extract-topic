@@ -33,14 +33,17 @@ aware and by default will ignore headers and strip formatting.
 
 The algorithm works as follows:
 1. Removes any HTML or Markdown style section headers (e.g., '&lt;h1&gt;...&lt;/h1&gt;', '### ...', etc.) (unless
-  `keepHeaders=true`) and any resulting leading whitespace is removed, unless `keepWhitespace=true` or
-  `keepNewlines=true`.
-2. Removes comment characters (unless `keepCommentChars=true`).
-3. Strips HTML tags (unless `keepTags=true`) and Markdown format (unless `keepMd=true`) and any resulting leading
-   whitespace is removed unless `keepWhitespace=true` or keepNewlines=true`.
-4. Extracts the first `sentenceCount` sentences (default 1).
-5. If the extracted text doesn't fulfill `minChars`, extract the next sentence.
-6. Trim the output to `maxChars`, if defined.
+  `keepHeaders=true`) and whitespace is trimmed, unless `keepWhitespace=true` or`keepNewlines=true`.
+2. Removes comment characters (unless `keepCommentChars=true`) and whitespace is trimmed unless
+   `keepWhitespace=true` or `keepNewlines=true`.
+3. Strips HTML tags (unless `keepTags=true`) and Markdown format (unless `keepMd=true`) and whitespace is trimmed
+   unless `keepWhitespace=true` or `keepNewlines=true`.
+4. All whitespace is normalized. Unless `keepNewlines=true`, newlines are removed then, unless `keepWhitespace=true`
+   tabs and non-breaking spaces are converted to normal spaces, any multiple spaces are reduced to a single space,
+   and space between the last word and end-punctuation is removed.
+5. Extracts the first `sentenceCount` sentences (default 1).
+6. If the extracted text doesn't fulfill `minChars`, extract the next sentence.
+7. Trim the output to `maxChars`, if defined.
 
 Re removing comment signifiers, the function will attempt to remove specified comment signifers from the beginning
 of each line in the text (including any leading whitespace) beginning with the designated signifier string. '/*' is
