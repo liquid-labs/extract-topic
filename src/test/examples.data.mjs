@@ -11,7 +11,7 @@ const exampleString = `<table>\n  <tr><th>Input</th><th>Options</th><th>Output</
   exampleData.map(([input, options, output]) =>
       '\n  <tr>\n    <td><pre>\n' + input.replaceAll('&', '&amp;').replaceAll('<', '&lt;').replaceAll('>', '&gt;') + '\n</pre></td>'
       + '<td>' + JSON.stringify(options) + '</td>'
-      + '<td><pre>' + output + '</pre><td>\n  </tr>'
+      + '<td><pre>' + output + '</pre></td>\n  </tr>'
   ).join('') + '\n</table>'
 
 export { exampleData, exampleString }

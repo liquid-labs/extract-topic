@@ -20,6 +20,8 @@ console.log('The topic sentence is: ' + extractTopic(paragraph))
 // prints: "The topic sentence is: Desire is irrelevant."
 ```
 
+See more [examples](#examples).
+
 ##  API reference
 _API generated with [dmd-readme-api](https://www.npmjs.com/package/dmd-readme-api)._
 
@@ -71,19 +73,19 @@ leading '*' characters from the body of the comment are removed (Javadoc style).
   <tr>
     <td><pre>
 This is an IP address: 127.0.0.1. For localhost.
-</pre></td><td>undefined</td><td><pre>This is an IP address: 127.0.0.1.</pre><td>
+</pre></td><td>undefined</td><td><pre>This is an IP address: 127.0.0.1.</pre></td>
   </tr>
   <tr>
     <td><pre>
 ## Header
 __And__ **inline** markdown? Is it okay?
-</pre></td><td>undefined</td><td><pre>And inline markdown?</pre><td>
+</pre></td><td>undefined</td><td><pre>And inline markdown?</pre></td>
   </tr>
   <tr>
     <td><pre>
 &lt;h1&gt;Header&lt;/h1&gt;
 &lt;div&gt;&lt;bold&gt;And&lt;/bold&gt; HTML? Does it work?&lt;/div&gt;
-</pre></td><td>undefined</td><td><pre>And HTML?</pre><td>
+</pre></td><td>undefined</td><td><pre>And HTML?</pre></td>
   </tr>
   <tr>
     <td><pre>
@@ -91,19 +93,19 @@ __And__ **inline** markdown? Is it okay?
   * about jsdoc
   * comments? How about that?
 */
-</pre></td><td>undefined</td><td><pre>What about jsdoc comments?</pre><td>
+</pre></td><td>undefined</td><td><pre>What about jsdoc comments?</pre></td>
   </tr>
   <tr>
     <td><pre>
 /* // Embedded
 //comments stay. Extract again to remove. */
 </pre></td><td>{"keepNewlines":true}</td><td><pre>// Embedded
-//comments stay.</pre><td>
+//comments stay.</pre></td>
   </tr>
   <tr>
     <td><pre>
 Hi! What about min chars? Do they work?
-</pre></td><td>{"minChars":10}</td><td><pre>Hi! What about min chars?</pre><td>
+</pre></td><td>{"minChars":10}</td><td><pre>Hi! What about min chars?</pre></td>
   </tr>
 </table>
 
