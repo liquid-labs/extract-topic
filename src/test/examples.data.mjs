@@ -7,9 +7,9 @@ const exampleData = [
   ['Hi! What about min chars? Do they work?', { minChars: 10 }, 'Hi! What about min chars?'],
 ]
 
-const exampleString = `<table>\n  <th><td>Input</td><td>Options</td><td>Output</td></th>` +
+const exampleString = `<table>\n  <tr><th>Input</th><th>Options</th><th>Output</th></tr>` +
   exampleData.map(([input, options, output]) =>
-      '\n  <tr>\n    <td><pre>\n' + input /*.replaceAll('&', '&amp;').replaceAll('<', '&lt;').replaceAll('>', '&gt;')*/ + '\n</pre></td>'
+      '\n  <tr>\n    <td><pre>\n' + input.replaceAll('&', '&amp;').replaceAll('<', '&lt;').replaceAll('>', '&gt;') + '\n</pre></td>'
       + '<td>' + JSON.stringify(options) + '</td>'
       + '<td><pre>' + output + '</pre><td>\n  </tr>'
   ).join('') + '\n</table>'
