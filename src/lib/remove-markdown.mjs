@@ -20,6 +20,8 @@ const removeMarkdown = (text, { keepWhitespace, removeBackticks }) => {
   text = text.replaceAll(inlineFormattersRe, '$2')
   // remove pre
   text = text.replaceAll(/^\s*```[a-zA-Z0-9]*\s*$/gm, '')
+  // remove horizontal rule
+  text = text.replaceAll(/^([_=-])\1{2,}\s*$/gm, '')
   // remove links (and replace with label)
   text = text.replaceAll(linkRe, '$1')
   // remove backticks if told to
