@@ -5,6 +5,7 @@ const exampleData = [
   ['<h1>Overview</h1>\n<div>Topic intro. Keep the header.</div>', { handleHeaders : ': ' }, 'Overview: Topic intro.'],
   ['/** What\n  * about jsdoc\n  * comments? How about that?\n*/', undefined, 'What about jsdoc comments?'],
   ['/* // Embedded\n//comments stay. Extract again to remove. */', { keepNewlines : true }, '// Embedded\n//comments stay.'],
+  ['HTML &amp; MD \\(escaped\\) characters are decoded\\. Nice!', undefined, 'HTML & MD (escaped) characters are decoded.'],
   ['Hi! What about min chars? Do they work?', { minChars : 10 }, 'Hi! What about min chars?'],
 ]
 

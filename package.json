@@ -37,5 +37,8 @@
   },
   "_comply": {
     "orgKey": "@liquid-labs"
+  },
+  "dependencies": {
+    "he": "^1.2.0"
   }
 }

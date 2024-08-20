@@ -115,6 +115,11 @@ __And__ **inline** markdown? Is it okay?
   </tr>
   <tr>
     <td><pre>
+HTML &amp;amp; MD (escaped) characters are decoded. Nice!
+</pre></td><td>undefined</td><td><pre>HTML & MD (escaped) characters are decoded.</pre></td>
+  </tr>
+  <tr>
+    <td><pre>
 Hi! What about min chars? Do they work?
 </pre></td><td>{"minChars":10}</td><td><pre>Hi! What about min chars?</pre></td>
   </tr>
