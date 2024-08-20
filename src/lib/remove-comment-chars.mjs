@@ -4,7 +4,8 @@ const removeCommentChars = (text, { commentSignifiers }) => {
   for (const signifier of commentSignifiers) {
     if (signifier === '/*') {
       text = removeJsStyleMultineCommentChars(text)
-    } else {
+    }
+    else {
       text = stripLeading(signifier, text)
     }
   }

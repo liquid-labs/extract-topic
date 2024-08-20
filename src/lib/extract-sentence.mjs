@@ -5,8 +5,10 @@ const extractSentence = (text) => {
   const sentence = result?.[1]
   if (sentence === undefined) {
     return [text, '']
-  } else {
+  }
+  else {
     const remainder = text.substring(result.index).trim()
+
     return [sentence.trim(), remainder]
   }
 }

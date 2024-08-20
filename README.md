@@ -24,7 +24,7 @@ console.log('The topic sentence is: ' + extractTopic(paragraph))
 _API generated with [dmd-readme-api](https://www.npmjs.com/package/dmd-readme-api)._
 
 <a id="extractTopic"></a>
-### `extractTopic(text, [options])` ⇒ `string` <sup>↱<sup>[source code](./src/extract-topic.mjs#L42)</sup></sup>
+### `extractTopic(text, [options])` ⇒ `string` 
 
 Extracts the topic (typically the first sentence) from a paragraph. The function is HTML, Markdown, and comment
 aware and by default will ignore headers and strip formatting.
@@ -45,19 +45,19 @@ treated as a special multi-line comment signifier. The leading '/*' and trailing
 leading '*' characters from the body of the comment are removed (Javadoc style).
 
 
-| Param | Type | Description |
-| --- | --- | --- |
-| text | `string` | The original block of text to extract the topic from. |
-| [options] | `object` | Extraction options. |
-| [options.commentSignifiers] | `Array.<string>` | An array of comment signifiers to be removed.   Pass in an empty array to keep all comment signifiers. See note on removing comment signifiers in function   documentation. |
-| [options.keepCommentChars] | `boolean` | If true, then comment signifiers are left in place. |
-| [options.keepHeaders] | `boolean` | If true, then HTML and Markdown style headers are left in place. |
-| [options.keepMd] | `boolean` | If true, then Markdown formatting is left in place. |
-| [options.keepTags] | `boolean` | If true, then HTML style tags are left in place. |
-| [options.maxChars] | `number` \| `undefined` | If set, then result will be limited to the indicated   number of characters. |
-| [options.minChars] | `number` | If set, then the function will continue to extract sentences until the   `minChars` have been satisfied (regardless of `sentenceCount`). |
-| [options.removeBackticks] | `boolean` | If True, then backticks are also removed. |
-| [options.sentenceCount] | `number` | The minimum number of sentences to extract. |
+| Param | Type | Default | Description |
+| --- | --- | --- | --- |
+| `text` | `string` |  | The original block of text to extract the topic from. |
+| [`options`] | `object` |  | Extraction options. |
+| [`options.commentSignifiers`] | `Array.<string>` | `[&#x27;/*&#x27;, &#x27;//&#x27;]` | An array of comment signifiers to be removed.   Pass in an empty array to keep all comment signifiers. See note on removing comment signifiers in function   documentation. |
+| [`options.keepCommentChars`] | `boolean` | `false` | If true, then comment signifiers are left in place. |
+| [`options.keepHeaders`] | `boolean` | `false` | If true, then HTML and Markdown style headers are left in place. |
+| [`options.keepMd`] | `boolean` | `false` | If true, then Markdown formatting is left in place. |
+| [`options.keepTags`] | `boolean` | `false` | If true, then HTML style tags are left in place. |
+| [`options.maxChars`] | `number` \| `undefined` |  | If set, then result will be limited to the indicated   number of characters. |
+| [`options.minChars`] | `number` | `0` | If set, then the function will continue to extract sentences until the   `minChars` have been satisfied (regardless of `sentenceCount`). |
+| [`options.removeBackticks`] | `boolean` | `false` | If True, then backticks are also removed. |
+| [`options.sentenceCount`] | `number` | `1` | The minimum number of sentences to extract. |
 
 **Returns**: `string` - - The extracted topic.
 
