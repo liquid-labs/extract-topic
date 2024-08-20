@@ -1,0 +1,376 @@
+Test git rev: ed2265b7582e8ed71904a65c6be1d448ac85d9c2
+  console.log
+    null
+
+      at log (../src/lib/process-headers.mjs:6:32)
+
+  console.log
+    ya! undefined
+
+      at log (../src/lib/process-headers.mjs:6:13)
+
+  console.log
+    null
+
+      at log (../src/lib/process-headers.mjs:6:32)
+
+  console.log
+    ya! undefined
+
+      at log (../src/lib/process-headers.mjs:6:13)
+
+  console.log
+    null
+
+      at log (../src/lib/process-headers.mjs:6:32)
+
+  console.log
+    ya! undefined
+
+      at log (../src/lib/process-headers.mjs:6:13)
+
+  console.log
+    null
+
+      at log (../src/lib/process-headers.mjs:6:32)
+
+  console.log
+    ya! undefined
+
+      at log (../src/lib/process-headers.mjs:6:13)
+
+  console.log
+    null
+
+      at log (../src/lib/process-headers.mjs:6:32)
+
+  console.log
+    ya! undefined
+
+      at log (../src/lib/process-headers.mjs:6:13)
+
+  console.log
+    null
+
+      at log (../src/lib/process-headers.mjs:6:32)
+
+  console.log
+    ya! undefined
+
+      at log (../src/lib/process-headers.mjs:6:13)
+
+  console.log
+    null
+
+      at log (../src/lib/process-headers.mjs:6:32)
+
+  console.log
+    ya! undefined
+
+      at log (../src/lib/process-headers.mjs:6:13)
+
+  console.log
+    null
+
+      at log (../src/lib/process-headers.mjs:6:32)
+
+  console.log
+    ya! undefined
+
+      at log (../src/lib/process-headers.mjs:6:13)
+
+  console.log
+    null
+
+      at log (../src/lib/process-headers.mjs:6:32)
+
+  console.log
+    ya! undefined
+
+      at log (../src/lib/process-headers.mjs:6:13)
+
+  console.log
+    null
+
+      at log (../src/lib/process-headers.mjs:6:32)
+
+  console.log
+    ya! undefined
+
+      at log (../src/lib/process-headers.mjs:6:13)
+
+  console.log
+    null
+
+      at log (../src/lib/process-headers.mjs:6:32)
+
+  console.log
+    ya! undefined
+
+      at log (../src/lib/process-headers.mjs:6:13)
+
+  console.log
+    null
+
+      at log (../src/lib/process-headers.mjs:6:32)
+
+  console.log
+    ya! undefined
+
+      at log (../src/lib/process-headers.mjs:6:13)
+
+  console.log
+    [ '<h1>Header 1</h1>' ]
+
+      at log (../src/lib/process-headers.mjs:6:32)
+
+  console.log
+    ya! undefined
+
+      at log (../src/lib/process-headers.mjs:6:13)
+
+  console.log
+    null
+
+      at log (../src/lib/process-headers.mjs:6:32)
+
+  console.log
+    ya! undefined
+
+      at log (../src/lib/process-headers.mjs:6:13)
+
+  console.log
+    null
+
+      at log (../src/lib/process-headers.mjs:6:32)
+
+  console.log
+    ya! undefined
+
+      at log (../src/lib/process-headers.mjs:6:13)
+
+  console.log
+    text: # Hi
+    Keep the header. Okay?
+
+      at log (../src/lib/process-headers.mjs:11:13)
+
+  console.log
+    text(2): # Hi 
+    Keep the header. Okay?
+
+      at log (../src/lib/process-headers.mjs:14:13)
+
+  console.log
+    text: <h1>Hi</h1>
+    Keep the header. Okay?
+
+      at log (../src/lib/process-headers.mjs:11:13)
+
+  console.log
+    text(2): <h1>Hi: </h1>
+    Keep the header. Okay?
+
+      at log (../src/lib/process-headers.mjs:14:13)
+
+  console.log
+    text: # Hi
+    Keep the header. Okay?
+
+      at log (../src/lib/process-headers.mjs:11:13)
+
+  console.log
+    text(2): # Hi 
+    Keep the header. Okay?
+
+      at log (../src/lib/process-headers.mjs:14:13)
+
+  console.log
+    null
+
+      at log (../src/lib/process-headers.mjs:6:32)
+
+  console.log
+    ya! undefined
+
+      at log (../src/lib/process-headers.mjs:6:13)
+
+  console.log
+    null
+
+      at log (../src/lib/process-headers.mjs:6:32)
+
+  console.log
+    ya! undefined
+
+      at log (../src/lib/process-headers.mjs:6:13)
+
+  console.log
+    null
+
+      at log (../src/lib/process-headers.mjs:6:32)
+
+  console.log
+    ya! undefined
+
+      at log (../src/lib/process-headers.mjs:6:13)
+
+  console.log
+    null
+
+      at log (../src/lib/process-headers.mjs:6:32)
+
+  console.log
+    ya! undefined
+
+      at log (../src/lib/process-headers.mjs:6:13)
+
+  console.log
+    null
+
+      at log (../src/lib/process-headers.mjs:6:32)
+
+  console.log
+    ya! undefined
+
+      at log (../src/lib/process-headers.mjs:6:13)
+
+  console.log
+    null
+
+      at log (../src/lib/process-headers.mjs:6:32)
+
+  console.log
+    ya! undefined
+
+      at log (../src/lib/process-headers.mjs:6:13)
+
+  console.log
+    [ '<h1>Header</h1>' ]
+
+      at log (../src/lib/process-headers.mjs:6:32)
+
+  console.log
+    ya! undefined
+
+      at log (../src/lib/process-headers.mjs:6:13)
+
+  console.log
+    text: <h1>Overview</h1>
+    <div>Topic intro. Keep the header.</div>
+
+      at log (../src/lib/process-headers.mjs:11:13)
+
+  console.log
+    text(2): <h1>Overview: </h1>
+    <div>Topic intro. Keep the header.</div>
+
+      at log (../src/lib/process-headers.mjs:14:13)
+
+  console.log
+    null
+
+      at log (../src/lib/process-headers.mjs:6:32)
+
+  console.log
+    ya! undefined
+
+      at log (../src/lib/process-headers.mjs:6:13)
+
+  console.log
+    null
+
+      at log (../src/lib/process-headers.mjs:6:32)
+
+  console.log
+    ya! undefined
+
+      at log (../src/lib/process-headers.mjs:6:13)
+
+  console.log
+    null
+
+      at log (../src/lib/process-headers.mjs:6:32)
+
+  console.log
+    ya! undefined
+
+      at log (../src/lib/process-headers.mjs:6:13)
+
+PASS test/extract-topic.test.js
+  extractTopic
+    ✓ I don't end with options undefined => I don't end (14 ms)
+    ✓ First sentence. Second sentence. with options undefined => First sentence. (2 ms)
+    ✓ How about a question? Hopufully. with options undefined => How about a question? (2 ms)
+    ✓ Exciting! Hopufully. with options undefined => Exciting! (1 ms)
+    ✓ This is an IP address: 127.0.0.1. with options undefined => This is an IP address: 127.0.0.1. (2 ms)
+    ✓ How about
+multilines? Does it work? with options undefined => How about multilines? (1 ms)
+    ✓ How 	 about
+weird  spaces	? Does it work? with options undefined => How about weird spaces? (1 ms)
+    ✓ How about... an ellipse? Does it work? with options undefined => How about... an ellipse?
+    ✓ __What__ about **inline** markdown? Is it okay? with options undefined => What about inline markdown? (1 ms)
+    ✓ And what about
+* markdown
+- lists? with options undefined => And what about markdown lists? (1 ms)
+    ✓ And what about
+1. numbered
+2. lists? with options undefined => And what about numbered lists?
+    ✓ # Header 1
+This is the topic! Truly. with options undefined => This is the topic! (1 ms)
+    ✓ <h1>Header 1</h1>
+This is the topic! Truly. with options undefined => This is the topic! (2 ms)
+    ✓ // Do comments
+  // work? Let's see! with options undefined => Do comments work?
+    ✓ /* And what
+about multiline
+ comments? How about that? */ with options undefined => And what about multiline comments? (1 ms)
+    ✓ # Hi
+Keep the header. Okay? with options {"handleHeaders": " "} => Hi Keep the header. (1 ms)
+    ✓ <h1>Hi</h1>
+Keep the header. Okay? with options {"handleHeaders": ": "} => Hi: Keep the header. (1 ms)
+    ✓ # Hi
+Keep the header. Okay? with options {"handleHeaders": " ", "keepMd": true} => # Hi Keep the header.
+    ✓ `Backticks` stay. Yeah? with options undefined => `Backticks` stay. (1 ms)
+    ✓ `Backticks` go. Yeah? with options {"removeBackticks": true} => Backticks go. (1 ms)
+    ✓ 
+Keep 	whitespace. Weird. with options {"keepWhitespace": true} => 
+Keep 	whitespace. (1 ms)
+    ✓ /** Keep 	whitespace
+*   in comment. Weird. */ with options {"keepWhitespace": true} =>  Keep 	whitespace
+  in comment.
+    ✓ This is an IP address: 127.0.0.1. For localhost. with options undefined => This is an IP address: 127.0.0.1. (1 ms)
+    ✓ ## Header
+__And__ **inline** markdown? Is it okay? with options undefined => And inline markdown? (1 ms)
+    ✓ <h1>Header</h1>
+<div><bold>And</bold> HTML? Does it work?</div> with options undefined => And HTML?
+    ✓ <h1>Overview</h1>
+<div>Topic intro. Keep the header.</div> with options {"handleHeaders": ": "} => Overview: Topic intro. (1 ms)
+    ✓ /** What
+  * about jsdoc
+  * comments? How about that?
+*/ with options undefined => What about jsdoc comments? (3 ms)
+    ✓ /* // Embedded
+//comments stay. Extract again to remove. */ with options {"keepNewlines": true} => // Embedded
+//comments stay.
+    ✓ Hi! What about min chars? Do they work? with options {"minChars": 10} => Hi! What about min chars? (1 ms)
+
+---------------------------|---------|----------|---------|---------|--------------------
+File                       | % Stmts | % Branch | % Funcs | % Lines | Uncovered Line #s  
+---------------------------|---------|----------|---------|---------|--------------------
+All files                  |     100 |    81.17 |     100 |     100 |                    
+ src                       |     100 |    88.23 |     100 |     100 |                    
+  extract-topic.mjs        |     100 |    88.23 |     100 |     100 | 52,54,58,62,96-103 
+ src/lib                   |     100 |    70.58 |     100 |     100 |                    
+  extract-sentence.mjs     |     100 |      100 |     100 |     100 |                    
+  process-headers.mjs      |     100 |      100 |     100 |     100 |                    
+  remove-comment-chars.mjs |     100 |       40 |     100 |     100 | 1                  
+  remove-markdown.mjs      |     100 |      100 |     100 |     100 |                    
+  remove-tags.mjs          |     100 |      100 |     100 |     100 |                    
+  strip-leading.mjs        |     100 |    85.71 |     100 |     100 | 1                  
+---------------------------|---------|----------|---------|---------|--------------------
+Test Suites: 1 passed, 1 total
+Tests:       29 passed, 29 total
+Snapshots:   0 total
+Time:        0.298 s, estimated 1 s
+Ran all test suites.
