@@ -5,6 +5,8 @@ const backticksRe = /`(.*?)`/gm
 const headingMarkersRe = /^#+/gm
 
 const removeMarkdown = (text, { keepWhitespace, removeBackticks }) => {
+  // remove header markers (in case header retained)
+  text = stripLeading('#+ ?', text, { keepWhitespace, noEscape : true })
   // remove list formatting.
   text = stripLeading('* ', text, { keepWhitespace })
   text = stripLeading('- ', text, { keepWhitespace })
