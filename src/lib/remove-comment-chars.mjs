@@ -13,22 +13,24 @@ const removeCommentChars = (text, { commentSignifiers, keepWhitespace }) => {
   return stripProtection(text, { keepWhitespace })
 }
 
-const jsMultlineMatcher = /\/\*+\s*((?:.|[\r\n])*?)\*\//m
+const jsMultlineMatcherRe = /\/\*+\s*((?:.|[\r\n])*?)\*\//m
+const jsMultilineMatcherSpacePreserving = /\/\*+(\s*(?:.|[\r\n])*?)\*\//m
 
 const removeJsStyleMultineCommentChars = (text, { keepWhitespace }) => {
-  let result = text.match(jsMultlineMatcher)
+  const commentRe = keepWhitespace === true ? jsMultilineMatcherSpacePreserving : jsMultlineMatcherRe
+  let result = text.match(commentRe)
   while (result !== null) {
     const { index } = result
     let commentBody = result[1]
     const length = result[0].length
-    commentBody = stripLeading('*', commentBody, { keepWhitespace })
+    commentBody = stripLeading('\\* ?', commentBody, { keepWhitespace, noEscape : true })
     commentBody = protectText(commentBody) // commentBody is now an array of lines
     const splicedText = text.split('')
     splicedText.splice(index, length, ...commentBody)
     text = splicedText.join('')
 
     // match the next one
-    result = text.match(jsMultlineMatcher)
+    result = text.match(commentRe)
   }
 
   return text
