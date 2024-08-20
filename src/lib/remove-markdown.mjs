@@ -28,10 +28,10 @@ const removeMarkdown = (text, { keepWhitespace, removeBackticks }) => {
   let tableMatch = text.match(tableRe)
   while (tableMatch !== null) {
     const { index } = tableMatch
-    text = text.substring(0, index) 
-      + tableMatch[1]
-      + tableMatch[2].replaceAll(/([^\\])?\|/g, '$1 ')
-      + text.substring(index + tableMatch[1].length + tableMatch[2].length + 1)
+    text = text.substring(0, index)
+    + tableMatch[1]
+    + tableMatch[2].replaceAll(/([^\\])?\|/g, '$1 ')
+    + text.substring(index + tableMatch[1].length + tableMatch[2].length + 1)
     tableMatch = text.match(tableRe)
   }
   // remove horizontal rule
@@ -45,7 +45,7 @@ const removeMarkdown = (text, { keepWhitespace, removeBackticks }) => {
   // if `remaveHeaders=false', then we could have header formatting, which we will now remove
   text = text.replaceAll(headingMarkersRe, '')
   // de-escape stuff
-  text = text.replaceAll(escapableChars, '$1')
+  text = text.replaceAll(escapeRe, '$1')
 
   return text
 }
