@@ -53,6 +53,8 @@ leading '*' characters from the body of the comment are removed (Javadoc style).
 | [`options.keepCommentChars`] | `boolean` | `false` | If true, then comment signifiers are left in place. |
 | [`options.keepHeaders`] | `boolean` | `false` | If true, then HTML and Markdown style headers are left in place. |
 | [`options.keepMd`] | `boolean` | `false` | If true, then Markdown formatting is left in place. |
+| [`options.keepNewlines`] | `boolean` | `false` | If true, then newlines in the text are preserved. |
+| [`options.keepWhitespace`] | `boolean` | `false` | If true, then all whitespace in the text is preserved. |
 | [`options.keepTags`] | `boolean` | `false` | If true, then HTML style tags are left in place. |
 | [`options.maxChars`] | `number` \| `undefined` |  | If set, then result will be limited to the indicated   number of characters. |
 | [`options.minChars`] | `number` | `0` | If set, then the function will continue to extract sentences until the   `minChars` have been satisfied (regardless of `sentenceCount`). |
@@ -60,4 +62,28 @@ leading '*' characters from the body of the comment are removed (Javadoc style).
 | [`options.sentenceCount`] | `number` | `1` | The minimum number of sentences to extract. |
 
 **Returns**: `string` - - The extracted topic.
+
+
+## Examples
+
+| Input | Options | Output|
+--------
+|This is an IP address: 127.0.0.1. For localhost.|undefined|This is an IP address: 127.0.0.1.|
+,|## Header
+__And__ **inline** markdown? Is it okay?|undefined|And inline markdown?|
+,|&lt;h1&gt;Header&lt;/h1&gt;
+&lt;div&gt;&lt;bold&gt;And&lt;/bold&gt; HTML? Does it work?&lt;/div&gt;|undefined|And HTML?|
+,|/** What
+  * about jsdoc
+  * comments? How about that?
+*/|undefined|What about jsdoc comments?|
+,|/* // Embedded
+//comments stay. Extract again to remove. */|{
+  "keepNewlines": true
+}|// Embedded
+//comments stay.|
+,|Hi! What about min chars? Do they work?|{
+  "minChars": 10
+}|Hi! What about min chars?|
+
 

@@ -13,4 +13,6 @@ $(README_MD): $(README_MD_SRC)
 	  --configure jsdoc.config.json \
 	  --no-cache \
 	  >> $@
+	  echo -e '\n## Examples\n' >> $@
+	  node --input-type module -e 'import { exampleString } from "./src/test/examples.data.mjs"; process.stdout.write(exampleString + "\n\n")' >> $@
 	# cat $(SRC)/doc/README.02.md >> $@

@@ -11,7 +11,7 @@ const exampleString = `| Input | Options | Output|\n--------\n` +
   exampleData.map(([input, options, output]) =>
       '|' + input.replaceAll('&', '&amp;').replaceAll('<', '&lt;').replaceAll('>', '&gt;') 
       + '|' + JSON.stringify(options, null, '  ')
-      + '|' + output + '|'
+      + '|' + output + '|\n'
   )
 
-export { exampleData }
+export { exampleData, exampleString }
