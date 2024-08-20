@@ -1,7 +1,11 @@
 import { extractSentence } from './lib/extract-sentence'
+
 import { removeCommentChars } from './lib/remove-comment-chars'
+
 import { removeHeaders } from './lib/remove-headers'
+
 import { removeMarkdown } from './lib/remove-markdown'
+
 import { removeTags } from './lib/remove-tags'
 
 /**
@@ -48,7 +52,7 @@ const extractTopic = (text, {
   maxChars,
   minChars = 0,
   removeBackticks = false,
-  sentenceCount = 1
+  sentenceCount = 1,
 } = {}) => {
   if (keepHeaders !== true) {
     text = removeHeaders(text)

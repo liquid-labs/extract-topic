@@ -23,6 +23,6 @@ describe('extractTopic', () => {
     ['<h1>Hi</h1>\nKeep the header. Okay?', { keepHeaders : true }, 'Hi Keep the header.'],
     ['# Hi\nKeep the header. Okay?', { keepHeaders : true, keepMd : true }, '# Hi Keep the header.'],
     ['`Backticks` stay. Yeah?', undefined, '`Backticks` stay.'],
-    ['`Backticks` go. Yeah?', { removeBackticks : true }, 'Backticks go.']
+    ['`Backticks` go. Yeah?', { removeBackticks : true }, 'Backticks go.'],
   ])('%s with options %p => %s', (input, options, expected) => expect(extractTopic(input, options)).toBe(expected))
 })
