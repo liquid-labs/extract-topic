@@ -33,10 +33,11 @@ aware and by default will ignore headers and strip formatting.
 
 The algorithm works as follows:
 1. Removes any HTML or Markdown style section headers (e.g., '&lt;h1&gt;...&lt;/h1&gt;', '### ...', etc.) (unless
-`keepHeaders=true`) and any resulting leading whitespace is removed.
+  `keepHeaders=true`) and any resulting leading whitespace is removed, unless `keepWhitespace=true` or
+  `keepNewlines=true`.
 2. Removes comment characters (unless `keepCommentChars=true`).
 3. Strips HTML tags (unless `keepTags=true`) and Markdown format (unless `keepMd=true`) and any resulting leading
-whitespace is removed.
+   whitespace is removed unless `keepWhitespace=true` or keepNewlines=true`.
 4. Extracts the first `sentenceCount` sentences (default 1).
 5. If the extracted text doesn't fulfill `minChars`, extract the next sentence.
 6. Trim the output to `maxChars`, if defined.
