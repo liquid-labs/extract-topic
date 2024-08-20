@@ -10,6 +10,7 @@ const extractSentence = (text) => {
     const remainder = text.substring(sentence.length)
 
     const trailingSpace = result[2]
+
     return [sentence, remainder, trailingSpace]
   }
 }
