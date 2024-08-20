@@ -9,9 +9,9 @@ const exampleData = [
 
 const exampleString = `| Input | Options | Output|\n|--|--|--|\n` +
   exampleData.map(([input, options, output]) =>
-      '|' + input.replaceAll('&', '&amp;').replaceAll('<', '&lt;').replaceAll('>', '&gt;').replaceAll('\n', '&#10;')
+      '|```\n' + input + '\n```'// .replaceAll('&', '&amp;').replaceAll('<', '&lt;').replaceAll('>', '&gt;').replaceAll('\n', '&#10;')
       + '|' + JSON.stringify(options, null, '  ')
-      + '|' + output.replaceAll('\n', '&#10;') + '|'
+      + '|```\n' + output + '\n```|'//.replaceAll('\n', '&#10;') + '|'
   ).join('\n')
 
 export { exampleData, exampleString }
