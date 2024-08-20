@@ -7,7 +7,7 @@ const extractSentence = (text) => {
     return [text, '']
   }
   else {
-    const remainder = text.substring(result.index).trim()
+    const remainder = text.substring(sentence.length).trim()
 
     return [sentence.trim(), remainder]
   }
