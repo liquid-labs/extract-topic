@@ -1,15 +1,16 @@
-const sentenceRe = /^((?:[^.!?]|\.\.\.|\.[^\s])+[.?!])(?:\s|$)/m
+const sentenceRe = /^((?:[^.!?]|\.\.\.|\.[^\s])+[.?!])(\s|$)/m
 
 const extractSentence = (text) => {
   const result = text.match(sentenceRe)
   const sentence = result?.[1]
   if (sentence === undefined) {
-    return [text, '']
+    return [text, '', '']
   }
   else {
-    const remainder = text.substring(sentence.length).trim()
+    const remainder = text.substring(sentence.length)
 
-    return [sentence.trim(), remainder]
+    const trailingSpace = result[2]
+    return [sentence, remainder, trailingSpace]
   }
 }
 
