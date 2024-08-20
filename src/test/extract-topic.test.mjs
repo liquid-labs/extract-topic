@@ -13,6 +13,7 @@ describe('extractTopic', () => {
     ['How about... an ellipse? Does it work?', undefined, 'How about... an ellipse?'],
     ['__What__ about **inline** [markdown](#i-am-a-link)? Is it okay?', undefined, 'What about inline markdown?'],
     ['[What\nabout\n](\nmultiline links)? Do they work?', undefined, 'What about?'],
+    ['![What\nabout images?\n](\nmultiline links) Do they work?', undefined, 'What about images?'],
     ['> and what about\n> blockquotes?\nHey!', undefined, 'and what about blockquotes?'],
     ['```js\nmy code!\n```\nDone.', undefined, 'my code!'],
     ['---\nhorizontal rule "-". Done.', undefined, 'horizontal rule "-".'],

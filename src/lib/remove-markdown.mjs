@@ -1,7 +1,7 @@
 import { stripLeading } from './strip-leading'
 
 const inlineFormattersRe = /(__?_?|\*\*?\*?)(.*?)\1/gm
-const linkRe = /\[([^\]]*)\]\([^)]*\)/gm
+const linkRe = /!?\[([^\]]*)\]\([^)]*\)/gm
 const backticksRe = /`(.*?)`/gm
 const headingMarkersRe = /^#+/gm
 const altMdHeaderRe = /^([^\n\r]+)(\n|\r|\r\n)([=-]{2,})(\n|\r|\r\n|$)/gm
