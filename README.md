@@ -67,23 +67,15 @@ leading '*' characters from the body of the comment are removed (Javadoc style).
 ## Examples
 
 | Input | Options | Output|
---------
+|--|--|--|
 |This is an IP address: 127.0.0.1. For localhost.|undefined|This is an IP address: 127.0.0.1.|
-,|## Header
-__And__ **inline** markdown? Is it okay?|undefined|And inline markdown?|
-,|&lt;h1&gt;Header&lt;/h1&gt;
-&lt;div&gt;&lt;bold&gt;And&lt;/bold&gt; HTML? Does it work?&lt;/div&gt;|undefined|And HTML?|
-,|/** What
-  * about jsdoc
-  * comments? How about that?
-*/|undefined|What about jsdoc comments?|
-,|/* // Embedded
-//comments stay. Extract again to remove. */|{
+|## Header&#10;__And__ **inline** markdown? Is it okay?|undefined|And inline markdown?|
+|&lt;h1&gt;Header&lt;/h1&gt;&#10;&lt;div&gt;&lt;bold&gt;And&lt;/bold&gt; HTML? Does it work?&lt;/div&gt;|undefined|And HTML?|
+|/** What&#10;  * about jsdoc&#10;  * comments? How about that?&#10;*/|undefined|What about jsdoc comments?|
+|/* // Embedded&#10;//comments stay. Extract again to remove. */|{
   "keepNewlines": true
-}|// Embedded
-//comments stay.|
-,|Hi! What about min chars? Do they work?|{
+}|// Embedded&#10;//comments stay.|
+|Hi! What about min chars? Do they work?|{
   "minChars": 10
 }|Hi! What about min chars?|
-
 

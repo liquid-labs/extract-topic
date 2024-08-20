@@ -7,11 +7,11 @@ const exampleData = [
   ['Hi! What about min chars? Do they work?', { minChars: 10 }, 'Hi! What about min chars?'],
 ]
 
-const exampleString = `| Input | Options | Output|\n--------\n` +
+const exampleString = `| Input | Options | Output|\n|--|--|--|\n` +
   exampleData.map(([input, options, output]) =>
-      '|' + input.replaceAll('&', '&amp;').replaceAll('<', '&lt;').replaceAll('>', '&gt;') 
+      '|' + input.replaceAll('&', '&amp;').replaceAll('<', '&lt;').replaceAll('>', '&gt;').replaceAll('\n', '&#10;')
       + '|' + JSON.stringify(options, null, '  ')
-      + '|' + output + '|\n'
-  )
+      + '|' + output.replaceAll('\n', '&#10;') + '|'
+  ).join('\n')
 
 export { exampleData, exampleString }
