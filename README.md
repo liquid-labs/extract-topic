@@ -69,29 +69,41 @@ leading '*' characters from the body of the comment are removed (Javadoc style).
 <table>
   <th><td>Input</td><td>Options</td><td>Output</td></th>
   <tr>
-    <td>This is an IP address: 127.0.0.1. For localhost.</td><td>undefined</td><td>This is an IP address: 127.0.0.1.<td>
+    <td><pre>
+This is an IP address: 127.0.0.1. For localhost.
+</pre></td><td>undefined</td><td><pre>This is an IP address: 127.0.0.1.</pre><td>
   </tr>
   <tr>
-    <td>## Header
-__And__ **inline** markdown? Is it okay?</td><td>undefined</td><td>And inline markdown?<td>
+    <td><pre>
+## Header
+__And__ **inline** markdown? Is it okay?
+</pre></td><td>undefined</td><td><pre>And inline markdown?</pre><td>
   </tr>
   <tr>
-    <td>&lt;h1&gt;Header&lt;/h1&gt;
-&lt;div&gt;&lt;bold&gt;And&lt;/bold&gt; HTML? Does it work?&lt;/div&gt;</td><td>undefined</td><td>And HTML?<td>
+    <td><pre>
+<h1>Header</h1>
+<div><bold>And</bold> HTML? Does it work?</div>
+</pre></td><td>undefined</td><td><pre>And HTML?</pre><td>
   </tr>
   <tr>
-    <td>/** What
+    <td><pre>
+/** What
   * about jsdoc
   * comments? How about that?
-*/</td><td>undefined</td><td>What about jsdoc comments?<td>
+*/
+</pre></td><td>undefined</td><td><pre>What about jsdoc comments?</pre><td>
   </tr>
   <tr>
-    <td>/* // Embedded
-//comments stay. Extract again to remove. */</td><td>{"keepNewlines":true}</td><td>// Embedded
-//comments stay.<td>
+    <td><pre>
+/* // Embedded
+//comments stay. Extract again to remove. */
+</pre></td><td>{"keepNewlines":true}</td><td><pre>// Embedded
+//comments stay.</pre><td>
   </tr>
   <tr>
-    <td>Hi! What about min chars? Do they work?</td><td>{"minChars":10}</td><td>Hi! What about min chars?<td>
+    <td><pre>
+Hi! What about min chars? Do they work?
+</pre></td><td>{"minChars":10}</td><td><pre>Hi! What about min chars?</pre><td>
   </tr>
 </table>
 
