@@ -1,6 +1,7 @@
 import { stripLeading } from './strip-leading'
 
 const inlineFormattersRe = /(__?_?|\*\*?\*?)(.*?)\1/gm
+const linkRe = /\[([^\]]*)\]\([^)]*\)/gm
 const backticksRe = /`(.*?)`/gm
 const headingMarkersRe = /^#+/gm
 
@@ -13,6 +14,8 @@ const removeMarkdown = (text, { keepWhitespace, removeBackticks }) => {
   text = stripLeading('(?:0|[1-9][0-9]*)\\. ', text, { keepWhitespace, noEscape : true })
   // remove inline formatting
   text = text.replaceAll(inlineFormattersRe, '$2')
+  // remove links (and replace with label)
+  text = text.replaceAll(linkRe, '$1')
   // remove backticks if told to
   if (removeBackticks === true) {
     text = text.replaceAll(backticksRe, '$1')
