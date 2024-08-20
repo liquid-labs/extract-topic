@@ -9,7 +9,7 @@ import { removeTags } from './lib/remove-tags'
  * aware and by default will ignore headers and strip formatting.
  *
  * The algorithm works as follows:
- * 1. Removes any HTML or Markdown style section headers (e.g., '<h1>...</h1>`, '### ...', etc.) (unless
+ * 1. Removes any HTML or Markdown style section headers (e.g., `&lt;h1&gt;...&lt;/h1&gt;`, '### ...', etc.) (unless
  * `keepHeaders=true`) and any resulting leading whitespace is removed.
  * 2. Removes comment characters (unless `keepCommentChars=true`).
  * 3. Strips HTML tags (unless `keepTags=true`) and Markdown format (unless `keepMd=true`) and any resulting leading
