@@ -1,11 +1,7 @@
 import { extractSentence } from './lib/extract-sentence'
-
 import { removeCommentChars } from './lib/remove-comment-chars'
-
 import { removeHeaders } from './lib/remove-headers'
-
 import { removeMarkdown } from './lib/remove-markdown'
-
 import { removeTags } from './lib/remove-tags'
 
 /**
